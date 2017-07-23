@@ -1,0 +1,16 @@
+# Default values for whitepeople
+# This is a YAML-formatted file.
+# Declare name/value pairs to be passed into your templates.
+#
+replicaCount: 1
+restartPolicy: Never
+
+image:
+  repository: gcr.io/isaqt-1130/whitepeople
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  nodePort: 8080

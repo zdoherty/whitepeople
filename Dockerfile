@@ -1,8 +1,8 @@
 FROM scratch
 WORKDIR /
-ADD whitepeople /whitepeople
+ADD wp /wp
 
 EXPOSE 8080
 
-CMD [ "/whitepeople" ]
+CMD [ "/wp" ]
 
