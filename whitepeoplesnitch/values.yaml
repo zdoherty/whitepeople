@@ -7,8 +7,8 @@ restartPolicy: Never
 
 image:
   repository: gcr.io/isaqt-1130/whitepeople
-  tag: latest
-  pullPolicy: IfNotPresent
+  tag: 0.1.2
+  pullPolicy: Always
 
 service:
   type: LoadBalancer

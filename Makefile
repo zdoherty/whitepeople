@@ -3,3 +3,7 @@ build:
 
 container: build
 	docker build -t whitepeople .
+
+push: container
+	docker tag whitepeople gcr.io/isaqt-1130/whitepeople
+	gcloud docker -- push gcr.io/isaqt-1130/whitepeople

@@ -14,13 +14,13 @@ spec:
       labels:
         app: {{ template "name" . }}
         release: {{ .Release.Name }}
-      spec:
-        containers:
-        - name: {{ template "name" . }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-          - name: http
-            containerPort: {{ .Values.service.nodePort }}
-            protocol: TCP
+    spec:
+      containers:
+      - name: {{ template "name" . }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ .Values.service.nodePort }}
+          protocol: TCP
 
